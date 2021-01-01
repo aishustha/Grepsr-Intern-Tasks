@@ -1,0 +1,137 @@
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style: none;
+            text-decoration: transparent;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        *:focus {
+            outline: none !important
+        }
+        
+        .btn:focus,
+        .btn.focus,
+        .page-link:focus,
+        .form-control:focus {
+            outline: 0;
+            box-shadow: none !important;
+        }
+        
+        //box-shadow
+        .box-shadow-effect {
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+        
+        //scrollbar
+        *::-webkit-scrollbar {
+            width: 5px !important;
+            height: 5px !important;
+        }
+        
+        *::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px #d9e1e5 !important;
+            border-radius: 10px !important;
+        }
+        
+        *::-webkit-scrollbar-thumb {
+            background: #b7bfc3 !important;
+            border-radius: 10px !important;
+        }
+        
+        //flex
+        @mixin flex-property {
+            display: flex;
+            align-items: center;
+        }
+        
+        .flex {
+            &-Center {
+                @include flex-property;
+            }
+            &-Spaces {
+                @include flex-property;
+                justify-content: space-between;
+            }
+        }
+        
+        //bootstrap
+        .dropdown {
+            &-toggle::after {
+                display: inline-block;
+                margin-left: initial;
+                vertical-align: initial;
+                $transparent: transparent;
+                border: {
+                    top: $transparent;
+                    left: $transparent;
+                    right: $transparent;
+                    bottom: $transparent;
+                }
+            }
+            &-menu {
+                margin-top: 20px;
+                padding: 0px;
+                font-size: 14px;
+                border: 1px solid $border-color;
+            }
+            &-item {
+                padding: 10px 15px;
+                & svg {
+                    font-size: 12px;
+                }
+            }
+            &-item:active {
+                background-color: #f8f9fa;
+                color: $black-color;
+            }
+        }
+        
+        .navbar-light .navbar-nav .nav-link {
+            color: $black-color;
+            padding-left: 0px;
+            padding-right: 0px;
+            &:hover {
+                color: $black-color;
+            }
+        }
+        
+        //margin
+        .ml-30 {
+            margin-left: 30px;
+        }
+        
+        .ml-20 {
+            margin-left: 20px;
+        }
+        
+        .ml-10 {
+            margin-left: 10px;
+        }
+        
+        .ml-60 {
+            margin-left: 60px;
+        }
+        
+        .mb-15 {
+            margin-bottom: 15px;
+        }
+        
+        .mb-30 {
+            margin-bottom: 30px;
+        }

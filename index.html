@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard Tasks</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- wrapper-start  -->
+    <div class="wrapper">
+        <!-- main-topnav-start -->
+        <nav class="navbar navbar-expand-lg navbar-light navbar-topnav-fixed">
+            <div class="container-fluid">
+                <div class="navbar-collapse flex-Spaces" id="navbarfixed">
+                    <ul class="navbar-nav">
+                        <li>
+                            <a class="navbar-brand" href="#">Projects</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav navbar-link-spacing flex-Center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle notify-icon" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-bell"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-end border-btm" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item text-center" href="#"> 15 Notifications </a></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="flex-Spaces">
+                                            <div class="notify-msg">
+                                                <i class="fas fa-envelope"></i> 4 New Messages
+                                            </div>
+                                            <div class="notify-time ml-60">
+                                                3 mins
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="flex-Spaces">
+                                            <div class="notify-msg">
+                                                <i class="fas fa-users"></i> 8 Friend Request
+                                            </div>
+                                            <div class="notify-time ml-60">
+                                                12 hours
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="flex-Spaces">
+                                            <div class="notify-msg">
+                                                <i class="fas fa-file"></i> 3 New Reports
+                                            </div>
+                                            <div class="notify-time ml-60">
+                                                2 days
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown flex-Center navbar-circle-img">
+                            <a class="nav-link dropdown-toggle user-profile-name flex-Center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="d-none d-md-block d-lg-block">Margot Alba</div> <img src="assets/images/smile.jpg" class="img-fluid">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-cog"></i> Setting</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-user"></i> Profile</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-envelope"></i> Messages</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-power-off"></i> Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- main-topnav-end -->
+
+
+        <!-- main-sidenav-start -->
+        <aside class="navbar-leftnav-sidebar">
+            <div class="company-logo">
+                <a href="#">
+                    <img src="assets/images/Grepsr.png" class="img-fluid">
+                </a>
+            </div>
+
+
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link" id="first-tab" data-bs-toggle="pill" href="#first" role="tab" aria-controls="first" aria-selected="true">
+                    <i class="fas fa-square"></i>
+                    <div class="icon-title">Dashboard</div>
+                </a>
+                <a class="nav-link active" id="second-tab" data-bs-toggle="pill" href="#second" role="tab" aria-controls="second" aria-selected="false">
+                    <i class="fas fa-layer-group"></i>
+                    <div class="icon-title">Projects</div>
+                </a>
+                <a class="nav-link" id="third-tab" data-bs-toggle="pill" href="#third" role="tab" aria-controls="third" aria-selected="false">
+                    <i class="fas fa-home"></i>
+                    <div class="icon-title">Tasks</div>
+                </a>
+                <a class="nav-link" id="forth-tab" data-bs-toggle="pill" href="#forth" role="tab" aria-controls="forth" aria-selected="false">
+                    <i class="fas fa-file"></i>
+                    <div class="icon-title">Reports</div>
+                </a>
+                <a class="nav-link" id="fifth-tab" data-bs-toggle="pill" href="#fifth" role="tab" aria-controls="fifth" aria-selected="true">
+                    <div class="plus-icon"><i class="fas fa-plus"></i></div>
+                    <div class="icon-title">Add</div>
+                </a>
+                <a class="nav-link" id="sixth-tab" data-bs-toggle="pill" href="#sixth" role="tab" aria-controls="sixth" aria-selected="false">
+                    <div class="square-icon"></div>
+                    <div class="icon-title">Logout
+                    </div>
+                </a>
+            </div>
+        </aside>
+        <!-- main-sidenav-end -->
+
+
+        <!-- content-start -->
+        <div class="content-wrapper">
+            <div class="container-fluid">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade" id="first" role="tabpanel" aria-labelledby="first-tab">Mixins are defined using the @mixin at-rule, which is written @mixin
+                        <name> { ... } or @mixin name(
+                            <arguments...>) { ... }. A mixin’s name can be any Sass identifier, and it can contain any statement other than top-level statements. They can be used to encapsulate styles that can be dropped into a single style rule; they can contain style
+                                rules of their own that can be nested in other rules or included at the top level of the stylesheet; or they can just serve to modify variables.</div>
+
+                    <div class="tab-pane fade show active" id="second" role="tabpanel" aria-labelledby="second-tab">
+                        <div class="grid-division">
+                            <div class="row">
+                                <div class="col-xl-3">
+                                    <div class="grid-division-left responsive-mb-lg-30">
+                                        <div class="search-content mb-15">
+                                            <form action="" class="search-box flex-Center">
+                                                <button type="submit" class="btn">
+                                                    <i class="fa fa-search"></i>
+                                                </button>
+                                                <input type="text" class="form-control" placeholder="Search for projects or tags...">
+                                            </form>
+                                        </div>
+                                        <div class="collapse-content mb-30">
+                                            <div class="accordion" id="collapse-accordian">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingOne">
+                                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                            Sunpizza V1 ( 4 )
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#collapse-accordian">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>01.</div>
+                                                                        <div class="ml-10">Report A</div>
+                                                                    </div>
+                                                                    <div class="report-date red-circle"> 21 November 2019</div>
+                                                                </li>
+                                                                <li class="report-bgcolor">
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>02.</div>
+                                                                                <div class="ml-10">Report B</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Currently Running</div>
+                                                                        </div>
+                                                                        <div class="report-progress-icon">
+                                                                            <i class="fas fa-spinner"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>03.</div>
+                                                                        <div class="ml-10">Report C</div>
+                                                                    </div>
+                                                                    <div class="report-date yellow-circle"> 1 October 2018</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>04.</div>
+                                                                                <div class="ml-10">Report D</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Today 2:10pm</div>
+                                                                        </div>
+                                                                        <div class="report-percentage">
+                                                                            83%
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingTwo">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                            Mac book production
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#collapse-accordian">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>01.</div>
+                                                                        <div class="ml-10">Report A</div>
+                                                                    </div>
+                                                                    <div class="report-date red-circle"> 21 November 2019</div>
+                                                                </li>
+                                                                <li class="report-bgcolor">
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>02.</div>
+                                                                                <div class="ml-10">Report B</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Currently Running</div>
+                                                                        </div>
+                                                                        <div class="report-progress-icon">
+                                                                            <i class="fas fa-spinner"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>03.</div>
+                                                                        <div class="ml-10">Report C</div>
+                                                                    </div>
+                                                                    <div class="report-date yellow-circle"> 1 October 2018</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>04.</div>
+                                                                                <div class="ml-10">Report D</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Today 2:10pm</div>
+                                                                        </div>
+                                                                        <div class="report-percentage">
+                                                                            83%
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingThree">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                            burger king
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#collapse-accordian">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>01.</div>
+                                                                        <div class="ml-10">Report A</div>
+                                                                    </div>
+                                                                    <div class="report-date red-circle"> 21 November 2019</div>
+                                                                </li>
+                                                                <li class="report-bgcolor">
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>02.</div>
+                                                                                <div class="ml-10">Report B</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Currently Running</div>
+                                                                        </div>
+                                                                        <div class="report-progress-icon">
+                                                                            <i class="fas fa-spinner"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>03.</div>
+                                                                        <div class="ml-10">Report C</div>
+                                                                    </div>
+                                                                    <div class="report-date yellow-circle"> 1 October 2018</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>04.</div>
+                                                                                <div class="ml-10">Report D</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Today 2:10pm</div>
+                                                                        </div>
+                                                                        <div class="report-percentage">
+                                                                            83%
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingFour">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                            Dominos pizza
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#collapse-accordian">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>01.</div>
+                                                                        <div class="ml-10">Report A</div>
+                                                                    </div>
+                                                                    <div class="report-date red-circle"> 21 November 2019</div>
+                                                                </li>
+                                                                <li class="report-bgcolor">
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>02.</div>
+                                                                                <div class="ml-10">Report B</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Currently Running</div>
+                                                                        </div>
+                                                                        <div class="report-progress-icon">
+                                                                            <i class="fas fa-spinner"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>03.</div>
+                                                                        <div class="ml-10">Report C</div>
+                                                                    </div>
+                                                                    <div class="report-date yellow-circle"> 1 October 2018</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>04.</div>
+                                                                                <div class="ml-10">Report D</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Today 2:10pm</div>
+                                                                        </div>
+                                                                        <div class="report-percentage">
+                                                                            83%
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingFive">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                            Happy burger
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#collapse-accordian">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>01.</div>
+                                                                        <div class="ml-10">Report A</div>
+                                                                    </div>
+                                                                    <div class="report-date red-circle"> 21 November 2019</div>
+                                                                </li>
+                                                                <li class="report-bgcolor">
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>02.</div>
+                                                                                <div class="ml-10">Report B</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Currently Running</div>
+                                                                        </div>
+                                                                        <div class="report-progress-icon">
+                                                                            <i class="fas fa-spinner"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>03.</div>
+                                                                        <div class="ml-10">Report C</div>
+                                                                    </div>
+                                                                    <div class="report-date yellow-circle"> 1 October 2018</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>04.</div>
+                                                                                <div class="ml-10">Report D</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Today 2:10pm</div>
+                                                                        </div>
+                                                                        <div class="report-percentage">
+                                                                            83%
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingSix">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                            Pizza hut
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#collapse-accordian">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>01.</div>
+                                                                        <div class="ml-10">Report A</div>
+                                                                    </div>
+                                                                    <div class="report-date red-circle"> 21 November 2019</div>
+                                                                </li>
+                                                                <li class="report-bgcolor">
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>02.</div>
+                                                                                <div class="ml-10">Report B</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Currently Running</div>
+                                                                        </div>
+                                                                        <div class="report-progress-icon">
+                                                                            <i class="fas fa-spinner"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>03.</div>
+                                                                        <div class="ml-10">Report C</div>
+                                                                    </div>
+                                                                    <div class="report-date yellow-circle"> 1 October 2018</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>04.</div>
+                                                                                <div class="ml-10">Report D</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Today 2:10pm</div>
+                                                                        </div>
+                                                                        <div class="report-percentage">
+                                                                            83%
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingSeven">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                                            Happy burger
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#collapse-accordian">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>01.</div>
+                                                                        <div class="ml-10">Report A</div>
+                                                                    </div>
+                                                                    <div class="report-date red-circle"> 21 November 2019</div>
+                                                                </li>
+                                                                <li class="report-bgcolor">
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>02.</div>
+                                                                                <div class="ml-10">Report B</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Currently Running</div>
+                                                                        </div>
+                                                                        <div class="report-progress-icon">
+                                                                            <i class="fas fa-spinner"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>03.</div>
+                                                                        <div class="ml-10">Report C</div>
+                                                                    </div>
+                                                                    <div class="report-date yellow-circle"> 1 October 2018</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>04.</div>
+                                                                                <div class="ml-10">Report D</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Today 2:10pm</div>
+                                                                        </div>
+                                                                        <div class="report-percentage">
+                                                                            83%
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingEight">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                                            Pizza hut
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#collapse-accordian">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>01.</div>
+                                                                        <div class="ml-10">Report A</div>
+                                                                    </div>
+                                                                    <div class="report-date red-circle"> 21 November 2019</div>
+                                                                </li>
+                                                                <li class="report-bgcolor">
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>02.</div>
+                                                                                <div class="ml-10">Report B</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Currently Running</div>
+                                                                        </div>
+                                                                        <div class="report-progress-icon">
+                                                                            <i class="fas fa-spinner"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>03.</div>
+                                                                        <div class="ml-10">Report C</div>
+                                                                    </div>
+                                                                    <div class="report-date yellow-circle"> 1 October 2018</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>04.</div>
+                                                                                <div class="ml-10">Report D</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Today 2:10pm</div>
+                                                                        </div>
+                                                                        <div class="report-percentage">
+                                                                            83%
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingNine">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                                            Happy burger
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#collapse-accordian">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>01.</div>
+                                                                        <div class="ml-10">Report A</div>
+                                                                    </div>
+                                                                    <div class="report-date red-circle"> 21 November 2019</div>
+                                                                </li>
+                                                                <li class="report-bgcolor">
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>02.</div>
+                                                                                <div class="ml-10">Report B</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Currently Running</div>
+                                                                        </div>
+                                                                        <div class="report-progress-icon">
+                                                                            <i class="fas fa-spinner"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>03.</div>
+                                                                        <div class="ml-10">Report C</div>
+                                                                    </div>
+                                                                    <div class="report-date yellow-circle"> 1 October 2018</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>04.</div>
+                                                                                <div class="ml-10">Report D</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Today 2:10pm</div>
+                                                                        </div>
+                                                                        <div class="report-percentage">
+                                                                            83%
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingTen">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                                            Pizza hut
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#collapse-accordian">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>01.</div>
+                                                                        <div class="ml-10">Report A</div>
+                                                                    </div>
+                                                                    <div class="report-date red-circle"> 21 November 2019</div>
+                                                                </li>
+                                                                <li class="report-bgcolor">
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>02.</div>
+                                                                                <div class="ml-10">Report B</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Currently Running</div>
+                                                                        </div>
+                                                                        <div class="report-progress-icon">
+                                                                            <i class="fas fa-spinner"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>03.</div>
+                                                                        <div class="ml-10">Report C</div>
+                                                                    </div>
+                                                                    <div class="report-date yellow-circle"> 1 October 2018</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>04.</div>
+                                                                                <div class="ml-10">Report D</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Today 2:10pm</div>
+                                                                        </div>
+                                                                        <div class="report-percentage">
+                                                                            83%
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingEleven">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                                            Happy burger
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#collapse-accordian">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>01.</div>
+                                                                        <div class="ml-10">Report A</div>
+                                                                    </div>
+                                                                    <div class="report-date red-circle"> 21 November 2019</div>
+                                                                </li>
+                                                                <li class="report-bgcolor">
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>02.</div>
+                                                                                <div class="ml-10">Report B</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Currently Running</div>
+                                                                        </div>
+                                                                        <div class="report-progress-icon">
+                                                                            <i class="fas fa-spinner"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>03.</div>
+                                                                        <div class="ml-10">Report C</div>
+                                                                    </div>
+                                                                    <div class="report-date yellow-circle"> 1 October 2018</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>04.</div>
+                                                                                <div class="ml-10">Report D</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Today 2:10pm</div>
+                                                                        </div>
+                                                                        <div class="report-percentage">
+                                                                            83%
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingTwelve">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                                                            Pizza hut
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#collapse-accordian">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>01.</div>
+                                                                        <div class="ml-10">Report A</div>
+                                                                    </div>
+                                                                    <div class="report-date red-circle"> 21 November 2019</div>
+                                                                </li>
+                                                                <li class="report-bgcolor">
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>02.</div>
+                                                                                <div class="ml-10">Report B</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Currently Running</div>
+                                                                        </div>
+                                                                        <div class="report-progress-icon">
+                                                                            <i class="fas fa-spinner"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>03.</div>
+                                                                        <div class="ml-10">Report C</div>
+                                                                    </div>
+                                                                    <div class="report-date yellow-circle"> 1 October 2018</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>04.</div>
+                                                                                <div class="ml-10">Report D</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Today 2:10pm</div>
+                                                                        </div>
+                                                                        <div class="report-percentage">
+                                                                            83%
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingThirteen">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                                                            Happy burger
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#collapse-accordian">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>01.</div>
+                                                                        <div class="ml-10">Report A</div>
+                                                                    </div>
+                                                                    <div class="report-date red-circle"> 21 November 2019</div>
+                                                                </li>
+                                                                <li class="report-bgcolor">
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>02.</div>
+                                                                                <div class="ml-10">Report B</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Currently Running</div>
+                                                                        </div>
+                                                                        <div class="report-progress-icon">
+                                                                            <i class="fas fa-spinner"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>03.</div>
+                                                                        <div class="ml-10">Report C</div>
+                                                                    </div>
+                                                                    <div class="report-date yellow-circle"> 1 October 2018</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>04.</div>
+                                                                                <div class="ml-10">Report D</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Today 2:10pm</div>
+                                                                        </div>
+                                                                        <div class="report-percentage">
+                                                                            83%
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingForteen">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForteen" aria-expanded="false" aria-controls="collapseForteen">
+                                                            Pizza hut
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseForteen" class="accordion-collapse collapse" aria-labelledby="headingForteen" data-bs-parent="#collapse-accordian">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>01.</div>
+                                                                        <div class="ml-10">Report A</div>
+                                                                    </div>
+                                                                    <div class="report-date red-circle"> 21 November 2019</div>
+                                                                </li>
+                                                                <li class="report-bgcolor">
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>02.</div>
+                                                                                <div class="ml-10">Report B</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Currently Running</div>
+                                                                        </div>
+                                                                        <div class="report-progress-icon">
+                                                                            <i class="fas fa-spinner"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>03.</div>
+                                                                        <div class="ml-10">Report C</div>
+                                                                    </div>
+                                                                    <div class="report-date yellow-circle"> 1 October 2018</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>04.</div>
+                                                                                <div class="ml-10">Report D</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Today 2:10pm</div>
+                                                                        </div>
+                                                                        <div class="report-percentage">
+                                                                            83%
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingFifteen">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                                                            Happy burger
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen" data-bs-parent="#collapse-accordian">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>01.</div>
+                                                                        <div class="ml-10">Report A</div>
+                                                                    </div>
+                                                                    <div class="report-date red-circle"> 21 November 2019</div>
+                                                                </li>
+                                                                <li class="report-bgcolor">
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>02.</div>
+                                                                                <div class="ml-10">Report B</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Currently Running</div>
+                                                                        </div>
+                                                                        <div class="report-progress-icon">
+                                                                            <i class="fas fa-spinner"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>03.</div>
+                                                                        <div class="ml-10">Report C</div>
+                                                                    </div>
+                                                                    <div class="report-date yellow-circle"> 1 October 2018</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>04.</div>
+                                                                                <div class="ml-10">Report D</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Today 2:10pm</div>
+                                                                        </div>
+                                                                        <div class="report-percentage">
+                                                                            83%
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="headingSixteen">
+                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+                                                            Pizza hut
+                                                        </button>
+                                                    </h2>
+                                                    <div id="collapseSixteen" class="accordion-collapse collapse" aria-labelledby="headingSixteen" data-bs-parent="#collapse-accordian">
+                                                        <div class="accordion-body">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>01.</div>
+                                                                        <div class="ml-10">Report A</div>
+                                                                    </div>
+                                                                    <div class="report-date red-circle"> 21 November 2019</div>
+                                                                </li>
+                                                                <li class="report-bgcolor">
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>02.</div>
+                                                                                <div class="ml-10">Report B</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Currently Running</div>
+                                                                        </div>
+                                                                        <div class="report-progress-icon">
+                                                                            <i class="fas fa-spinner"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Center report-title">
+                                                                        <div>03.</div>
+                                                                        <div class="ml-10">Report C</div>
+                                                                    </div>
+                                                                    <div class="report-date yellow-circle"> 1 October 2018</div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="flex-Spaces">
+                                                                        <div class="">
+                                                                            <div class="flex-Center report-title">
+                                                                                <div>04.</div>
+                                                                                <div class="ml-10">Report D</div>
+                                                                            </div>
+                                                                            <div class="report-date green-circle"> Today 2:10pm</div>
+                                                                        </div>
+                                                                        <div class="report-percentage">
+                                                                            83%
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pagination-content">
+                                            <nav>
+                                                <ul class="pagination pagination-sm justify-content-center">
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Previous">
+                                                            <i class="fas fa-chevron-left"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#"> . . .</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">100</a></li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Next">
+                                                            <i class="fas fa-chevron-right"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-9">
+                                    <div class="grid-division-right-first flex-Spaces mb-30">
+                                        <div class="collapse-title">
+                                            <h6>Sunpizza V1 <span>/ Report B</span></h6>
+                                        </div>
+                                        <div class="icon-content">
+                                            <ul class="flex-Center">
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="attach-icon">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="headphone-icon">
+                                                            <i class="fas fa-headphones"></i>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="certificate-icon">
+                                                            <i class="fas fa-certificate"></i>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid-division-right-second file-tabs-content responsive-mb-lg-15">
+                                        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="file-first-tab" data-bs-toggle="pill" href="#file-first" role="tab" aria-controls="file-first" aria-selected="true">
+                                                    <i class="fas fa-file"></i> Dataset
+                                                </a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="file-second-tab" data-bs-toggle="pill" href="#file-second" role="tab" aria-controls="file-second" aria-selected="false">
+                                                    <i class="fas fa-file"></i> Schedule
+                                                </a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link active" id="file-third-tab" data-bs-toggle="pill" href="#file-third" role="tab" aria-controls="file-third" aria-selected="false">
+                                                    <i class="fas fa-file"></i> Data Quality
+                                                </a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="file-forth-tab" data-bs-toggle="pill" href="#file-forth" role="tab" aria-controls="file-forth" aria-selected="false">
+                                                    <i class="fas fa-file"></i> Data Delivery
+                                                </a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="file-fifth-tab" data-bs-toggle="pill" href="#file-fifth" role="tab" aria-controls="file-fifth" aria-selected="false">
+                                                    <i class="fas fa-file"></i> Activate
+                                                </a>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" id="file-sixth-tab" data-bs-toggle="pill" href="#file-sixth" role="tab" aria-controls="file-sixth" aria-selected="false">
+                                                    <i class="fas fa-file"></i> Activity
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="grid-division-right-second-inner-tab">
+
+                                        <div class="tab-content" id="pills-tabContent">
+                                            <div class="tab-pane fade " id="file-first" role="tabpanel" aria-labelledby="file-first-tab">...</div>
+                                            <div class="tab-pane fade" id="file-second" role="tabpanel" aria-labelledby="file-second-tab">...</div>
+                                            <div class="tab-pane fade show active" id="file-third" role="tabpanel" aria-labelledby="file-third-tab">
+                                                <div class="grid-division-right-third">
+                                                    <div class="d-flex align-items-start">
+                                                        <div class="tabs-vertical-scroll">
+                                                            <div class="nav flex-column nav-pills" id="detail-tab" role="tablist" aria-orientation="vertical">
+                                                                <a class="nav-link active" id="detail-first-tab" data-bs-toggle="pill" href="#detail-first" role="tab" aria-controls="detail-first" aria-selected="true">Url</a>
+                                                                <a class="nav-link" id="detail-second-tab" data-bs-toggle="pill" href="#detail-second" role="tab" aria-controls="detail-second" aria-selected="false">Image</a>
+                                                                <a class="nav-link" id="detail-third-tab" data-bs-toggle="pill" href="#detail-third" role="tab" aria-controls="detail-third" aria-selected="false">Description</a>
+                                                                <a class="nav-link" id="detail-forth-tab" data-bs-toggle="pill" href="#detail-forth" role="tab" aria-controls="detail-forth" aria-selected="false">Price</a>
+                                                                <a class="nav-link" id="detail-fifth-tab" data-bs-toggle="pill" href="#detail-fifth" role="tab" aria-controls="detail-fifth" aria-selected="false">UPC</a>
+                                                                <a class="nav-link" id="detail-sixth-tab" data-bs-toggle="pill" href="#detail-sixth" role="tab" aria-controls="detail-sixth" aria-selected="false">Files feed</a>
+                                                                <a class="nav-link" id="detail-seventh-tab" data-bs-toggle="pill" href="#detail-seventh" role="tab" aria-controls="detail-seventh" aria-selected="false">Image</a>
+                                                                <a class="nav-link" id="detail-eigth-tab" data-bs-toggle="pill" href="#detail-eigth" role="tab" aria-controls="detail-eigth" aria-selected="false">Desciption</a>
+                                                                <a class="nav-link" id="detail-ninth-tab" data-bs-toggle="pill" href="#detail-ninth" role="tab" aria-controls="detail-ninth" aria-selected="false">Price</a>
+                                                                <a class="nav-link" id="detail-tenth-tab" data-bs-toggle="pill" href="#detail-tenth" role="tab" aria-controls="detail-tenth" aria-selected="false">UPC</a>
+                                                                <a class="nav-link" id="detail-eleventh-tab" data-bs-toggle="pill" href="#detail-eleventh" role="tab" aria-controls="detail-eleventh" aria-selected="false">Files feed</a>
+                                                                <a class="nav-link" id="detail-twelveth-tab" data-bs-toggle="pill" href="#detail-twelveth" role="tab" aria-controls="detail-twelveth" aria-selected="false">Description</a>
+                                                                <a class="nav-link" id="detail-thirteenth-tab" data-bs-toggle="pill" href="#detail-thirteenth" role="tab" aria-controls="detail-thirteenth" aria-selected="false">Price</a>
+                                                                <a class="nav-link" id="detail-forteenth-tab" data-bs-toggle="pill" href="#detail-forteenth" role="tab" aria-controls="detail-forteenth" aria-selected="false">UPC</a>
+                                                                <a class="nav-link" id="detail-fifteenth-tab" data-bs-toggle="pill" href="#detail-fifteenth" role="tab" aria-controls="detail-fifteenth" aria-selected="false">Files feed</a>
+                                                                <a class="nav-link" id="detail-sixteenth-tab" data-bs-toggle="pill" href="#detail-sixteenth" role="tab" aria-controls="detail-sixteenth" aria-selected="false">Description</a>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-content" id="detail-tabContent">
+                                                            <div class="tab-pane fade show active" id="detail-first" role="tabpanel" aria-labelledby="detail-first-tab">...</div>
+                                                            <div class="tab-pane fade" id="detail-second" role="tabpanel" aria-labelledby="detail-second-tab">...</div>
+                                                            <div class="tab-pane fade" id="detail-third" role="tabpanel" aria-labelledby="detail-third-tab">...</div>
+                                                            <div class="tab-pane fade" id="detail-forth" role="tabpanel" aria-labelledby="detail-forth-tab">...</div>
+                                                            <div class="tab-pane fade" id="detail-fifth" role="tabpanel" aria-labelledby="detail-fifth-tab">...</div>
+                                                            <div class="tab-pane fade" id="detail-sixth" role="tabpanel" aria-labelledby="detail-sixth-tab">...</div>
+                                                            <div class="tab-pane fade" id="detail-seventh" role="tabpanel" aria-labelledby="detail-seventh-tab">...</div>
+                                                            <div class="tab-pane fade" id="detail-eigth" role="tabpanel" aria-labelledby="detail-eigth-tab">...</div>
+                                                            <div class="tab-pane fade" id="detail-ninth" role="tabpanel" aria-labelledby="detail-ninth-tab">...</div>
+                                                            <div class="tab-pane fade" id="detail-tenth" role="tabpanel" aria-labelledby="detail-tenth-tab">...</div>
+                                                            <div class="tab-pane fade" id="detail-eleventh" role="tabpanel" aria-labelledby="detail-eleventh-tab">...</div>
+                                                            <div class="tab-pane fade" id="detail-twelveth" role="tabpanel" aria-labelledby="detail-twelveth-tab">...</div>
+                                                            <div class="tab-pane fade" id="detail-thirteenth" role="tabpanel" aria-labelledby="detail-thirteenth-tab">...</div>
+                                                            <div class="tab-pane fade" id="detail-forteenth" role="tabpanel" aria-labelledby="detail-forteenth-tab">...</div>
+                                                            <div class="tab-pane fade" id="detail-fifteenth" role="tabpanel" aria-labelledby="detail-fifteenth-tab">...</div>
+                                                            <div class="tab-pane fade" id="detail-sixteenth" role="tabpanel" aria-labelledby="detail-sixteenth-tab">...</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="file-forth" role="tabpanel" aria-labelledby="file-forth-tab">...</div>
+                                            <div class="tab-pane fade" id="file-fifth" role="tabpanel" aria-labelledby="file-fifth-tab">...</div>
+                                            <div class="tab-pane fade" id="file-sixth" role="tabpanel" aria-labelledby="file-sixth-tab">...</div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="third" role="tabpanel" aria-labelledby="third-tab">Mixins are defined using the @mixin at-rule, which is written @mixin
+                        <name> { ... } or @mixin name(
+                            <arguments...>) { ... }. A mixin’s name can be any Sass identifier, and it can contain any statement other than top-level statements. They can be used to encapsulate styles that can be dropped into a single style rule; they can contain style
+                                rules of their own that can be nested in other rules or included at the top level of the stylesheet; or they can just serve to modify variables.</div>
+                    <div class="tab-pane fade" id="forth" role="tabpanel" aria-labelledby="forth-tab">Mixins are defined using the @mixin at-rule, which is written @mixin
+                        <name> { ... } or @mixin name(
+                            <arguments...>) { ... }. A mixin’s name can be any Sass identifier, and it can contain any statement other than top-level statements. They can be used to encapsulate styles that can be dropped into a single style rule; they can contain style
+                                rules of their own that can be nested in other rules or included at the top level of the stylesheet; or they can just serve to modify variables.</div>
+
+                    <div class="tab-pane fade" id="fifth" role="tabpanel" aria-labelledby="fifth-tab">Mixins are defined using the @mixin at-rule, which is written @mixin
+                        <name> { ... } or @mixin name(
+                            <arguments...>) { ... }. A mixin’s name can be any Sass identifier, and it can contain any statement other than top-level statements. They can be used to encapsulate styles that can be dropped into a single style rule; they can contain style
+                                rules of their own that can be nested in other rules or included at the top level of the stylesheet; or they can just serve to modify variables.</div>
+                    <div class="tab-pane fade" id="sixth" role="tabpanel" aria-labelledby="sixth-tab">Mixins are defined using the @mixin at-rule, which is written @mixin
+                        <name> { ... } or @mixin name(
+                            <arguments...>) { ... }. A mixin’s name can be any Sass identifier, and it can contain any statement other than top-level statements. They can be used to encapsulate styles that can be dropped into a single style rule; they can contain style
+                                rules of their own that can be nested in other rules or included at the top level of the stylesheet; or they can just serve to modify variables.</div>
+
+                </div>
+            </div>
+        </div>
+        <!-- content-end -->
+    </div>
+    <!-- wrapper-end -->
+    <script src="assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/popper.min.js"></script>
+    <script src="assets/vendor/fontawesome/js/all.js"></script>
+    <script src="assets/js/style.js"></script>
+
+</body>
+
+</html>
