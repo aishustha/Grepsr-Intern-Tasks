@@ -8,6 +8,15 @@
     }
 }
 
+@media (max-width: 1199.98px) {
+    .responsive-mb-xl-30 {
+        margin-bottom: 30px;
+    }
+    .responsive-mt-xl-30 {
+        margin-top: 30px;
+    }
+}
+
 @media (max-width: 991.98px) {
     .navbar-nav .dropdown-menu {
         position: absolute;
@@ -27,6 +36,19 @@
     }
 }
 
+@media (max-width: 776.98px) {
+    .responsive-mb-md-30 {
+        margin-bottom: 30px;
+    }
+    .grid-division-right-third .d-flex {
+        display: initial !important;
+        & .tabs-vertical-scroll,
+        & .tab-content {
+            width: 100%;
+        }
+    }
+}
+
 @media (max-width: 576.98px) {
     .navbar-link-spacing {
         & .nav-item {
@@ -35,5 +57,8 @@
         & .notify-time {
             display: none;
         }
+    }
+    .grid-division-left {
+        padding: 15px;
     }
 }

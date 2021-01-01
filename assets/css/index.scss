@@ -320,6 +320,10 @@
         & .tabs-vertical-scroll {
             overflow-y: scroll;
             height: 574px;
+            width: 20%;
+        }
+        & .tab-content {
+            width: 80%;
         }
         & .nav-pills .nav-link.active,
         & .nav-pills .show>.nav-link {
@@ -345,7 +349,96 @@
                 border-bottom: transparent;
             }
         }
+        & .form-detail {
+            font-size: $font-size-14;
+            font-weight: $font-weight-600;
+            & .form-textarea {
+                margin-top: 15px;
+                & ::-webkit-input-placeholder {
+                    color: $light-grey-color;
+                }
+            }
+            & .form-btn {
+                & .btn {
+                    font-size: $font-size-14;
+                    &.btn-save {
+                        background: $blue-color;
+                        color: $white-color;
+                    }
+                    &.btn-cancel {
+                        border: 1px solid $light-grey-color;
+                        color: $light-grey-color;
+                    }
+                }
+            }
+            & label {
+                display: flex;
+            }
+            & .form-check {
+                color: $dark-grey-color;
+                &-list {
+                    margin-left: 30px;
+                    color: $dark-grey-color;
+                    margin-top: 15px;
+                    & .form-check {
+                        margin-bottom: 15px;
+                    }
+                }
+                &-input {
+                    border: 2px solid $dark-grey-color;
+                    &:checked {
+                        background-color: $green-color;
+                        border-color: $green-color;
+                        box-shadow: 0px 0px 10px 0px $green-color;
+                    }
+                }
+            }
+        }
+        & .popover-box-content {
+            color: $dark-grey-color;
+            font-size: $font-size-12;
+            border: 1px solid $blue-color;
+            padding: 20px 15px;
+            background: #f5fcff;
+            border-radius: $border-radius;
+            & .btn-close-x {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                font-size: 15px;
+                background: transparent;
+                border: transparent;
+                & i,
+                & svg {
+                    color: $blue-color;
+                }
+            }
+            &:after {
+                content: " ";
+                position: absolute;
+                left: -10px;
+                top: 30px;
+                border-top: 7px solid #f5fcff;
+                border-right: 6px solid transparent;
+                border-left: 7px solid transparent;
+                transform: rotate(90deg);
+            }
+            &:before {
+                content: " ";
+                position: absolute;
+                left: -12px;
+                top: 30px;
+                border-top: 8px solid $blue-color;
+                border-right: 8px solid transparent;
+                border-left: 8px solid transparent;
+                transform: rotate(90deg);
+            }
+        }
     }
+}
+
+.collecting-data {
+    font-size: $font-size-14;
 }
 
 @mixin dot-colorful-icon {
@@ -440,8 +533,8 @@
 
 .grid-division-left {
     @include grid-division;
-    padding-right: 15px;
     padding: 30px;
+    padding-right: 15px;
 }
 
 .grid-division-right-first {
